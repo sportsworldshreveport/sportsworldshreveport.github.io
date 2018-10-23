@@ -1,0 +1,244 @@
+@charset "UTF-8";
+
+.pageWrapper {
+	background-color: #FFFFFF;
+	height: 500px;
+	width: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	
+	
+}
+
+
+
+
+
+
+.social {
+	
+	}
+.phone {
+	
+	}
+.directions {
+	
+	}
+
+.social:hover, .phone:hover, .directions:hover {
+	
+}
+
+
+.label {
+	height: 150px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	background-color: white;
+
+}
+
+
+.homeImage {
+	background-color: #F03034;
+	height: 450px;
+	width: 70%;
+	float: right;
+	margin-right: 20px;
+	background-image: url(assets/storeFront.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+.homeText {
+	height: 450px;
+	width: 210px;
+	margin-left: 20px;
+	float: left;
+	padding: 20px;
+	color: #333333;	
+}	
+	
+.homeText h4 {
+	margin-top: 5px;	
+	}
+		
+	
+.footer {
+	background-color: #D4D4D4;
+	height: 300px;
+	width: 100%;
+	
+}
+	
+
+		
+	
+	
+.logoDiv {
+	float: left;
+	height: 200px;
+	width: 25%;
+}
+	
+.logoDiv img {
+	margin-left: 40px;
+	margin-top: 20px;
+	}
+	
+	
+.navDiv {
+	float: left;
+	height: 100%;
+	width: 60%;
+}
+	
+.nav {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	margin-top: 120px;
+	}	
+	
+.nav li {
+	float: left;
+	margin-left: 20px;
+	}
+	
+.nav li a {
+	color: dimgrey;
+	text-decoration: none;
+	padding: 20px;
+	font-size:18px;
+	}	
+	
+.nav li a:hover {
+	color:black;	
+		
+	}	
+	
+.phoneAddressDiv {
+	float: left;
+	height: 100%;
+	width: 15%;
+}
+.phoneDiv {
+	height: 50px;
+	width: 100%;
+}
+
+.addressDiv {
+	height: 80px;
+	width: 100%;	
+	}	
+.phoneIconDiv, .addressIconDiv {
+	float: left;
+	height: 100%;
+	width: 40px;
+	text-align: center;
+	
+}
+
+	
+.phoneIconDiv img, .addressIconDiv img{
+	margin-top: 10px;
+	}
+	
+.phoneContentDiv {
+	height: 20px;
+	width: 100px;
+	float: left;
+	
+	}
+	
+.addressContentDiv {
+	height: 60px;
+	width: 100px;
+	float: left;
+		
+	}	
+	
+.phoneContentDiv {margin-top: 13px;}	
+.addressContentDiv {margin-top: 5px;}	
+	
+.phoneContentDiv a, .addressContentDiv a {
+	text-decoration: none;
+	font-size: 12px;
+	color: dimgrey;
+	font-weight: bold;
+	
+	}
+		
+.addressContentDiv a {
+	font-size: 10px;	
+	}	
+
+
+
+.leftFooterDiv {
+	float: left;
+	height: 200px;;
+	width: 20%;
+}
+	
+.centerFooterDiv {
+	float: left;
+	height: 300px;
+	width: 60%;
+	text-align: center;
+	color: gray;
+	font-size: 14px;
+}	
+	
+	
+.centerFooterDiv iframe {
+	margin-top: 30px;	
+	}	
+
+.rightFooterDiv {
+	float: left;
+	height:300px;;
+	width: 20%;
+	text-align: right;
+	
+	
+}	
+	
+ .social {
+		margin: 10px;
+		float: right;
+	}	
+	
+#bbb {
+	margin-right: 10px;
+	
+	}	
+	
+#siteMapNav li {
+	list-style-type: none;
+	text-decoration: none;
+	}
+	
+#siteMapNav li a {
+ 	text-decoration: none;
+	color:gray;
+	}
+	
+#siteMapNav li a:hover {
+	color: black;
+	}
+	
+
+
+
+
+
+
+
+
+	
