@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Sports World</title>
-<link rel="icon" href="assets/LOGO.png"><	
+	<link rel="icon" href="assets/LOGO.png">	
 <style type="text/css">
 
 	
@@ -53,16 +53,16 @@
 	
 .serviceContentDiv {
 	float: left;
-	height: 100%;
+	height: 500px;;
 	width: 75%;
 	
 }
 .serviceContent {
-	height: 400px;
+	height: 380px;
 	width: 600px;
 	margin-right: auto;
 	margin-left: auto;
-	margin-top: 30px;
+	margin-top: 60px;
 	background-color: white;
 	padding: 20px;
 	text-align: left;
@@ -131,7 +131,25 @@ h1 {
 	}	
 	
 #teamuniforms {
-	height: 600px;
+	height: 400px;
+	}	
+	
+#teamuniforms p {
+	color: gray;
+	}		
+
+.leftServiceDiv{
+	float:left;
+	width: 70%;
+	height: 300px;
+	}	
+.rightServiceDiv{
+	float:left;
+	width: 160px;
+	height: 300px;;
+	font-size: 12px;
+	color:gray;
+	margin: 10px;
 	}	
 	
 #teamUniformTextDiv {
@@ -186,7 +204,7 @@ h1 {
 	}	
 	
 #lettermanjackets {
-	
+	height: 400px;
 	}	
 	
 	
@@ -208,7 +226,29 @@ h1 {
 		
 	}	
 	
+#screenprinting {
+	color: grey;
+}	
 	
+
+	
+#heatpressImgDiv{
+	float:left;
+	}
+#heatpressTextDiv{
+	float:left;
+	width: 200px;
+	color: gray;
+	}
+
+#heatpressTextDiv ul {
+	color:gray;
+	list-style-type:square;
+	}
+	
+#heatpressTextDiv ul li {
+	margin-top: 25px;	
+	}	
 	
 </style>
 <link href="styles.css" rel="stylesheet" type="text/css">
@@ -338,12 +378,13 @@ $(document).ready(() => {
   
 	
   <div class="content"> 
+	  
     <div class="servicesDiv">
 	  <ul class="servicesNav">
 		<li id="teamsportsButton">Team Sports</li>
 		<li id="teamuniformsButton">Team Uniforms</li>
 		<li id="lettermanjacketsButton">Letterman Jackets</li>
-		<li id="gymuniformsButton">Gym Uniforms</li>
+<!--		<li id="gymuniformsButton">Gym Uniforms</li>-->
 		<li id="screenprintingButton">Screen Printing</li>
 		<li id="heatpressingButton">Heat Pressing</li>
 		
@@ -352,6 +393,9 @@ $(document).ready(() => {
 	  
 	  </div>
     <div class="serviceContentDiv">
+		
+	<div class="serviceContent" id="front"></div>	
+		
       <div class="serviceContent" id="teamsports">
         <div class="serviceContentPanel">
 <!--			<img src="assets/storeFloor.jpg" width="300" height="200" alt=""/> -->
@@ -371,7 +415,7 @@ $(document).ready(() => {
 				<li>More</li>
 			</ul>
 		  
-		  </div>
+	    </div>
 		<div id="brandsDiv" class="serviceContentPanel">
 		  
 		  
@@ -381,20 +425,36 @@ $(document).ready(() => {
 		
 	  </div>
 	  <div class="serviceContent" id="teamuniforms">
-<!--	    <div id="teamUniformTextDiv">-->
-		  <h2>TEAM UNIFORMS</h2>
-<!--
-		  <p>We have many styles and customization options for all uniforms.  Come into the store to get a quote on your team's uniforms today! </p>
+		  
+		  
+		  
+
+
+		<div>  <h2>TEAM UNIFORMS</h2>
+
+	    <p>We have many styles and customization options for all uniforms.  Come into the store to get a quote on your team's uniforms today! </p></div>
+		  
+		  <div class = "leftServiceDiv"><br><img src="assets/uniforms.jpeg" width="400" alt=""/></div>
+		  <div class = "rightServiceDiv">
+		  Alleson Uniform Builder<br><a href="uniformBuilder.html"><img src="assets/uniformBuilder.jpg" width="180px;"  alt=""/></a> 
+			  
+			  		<br><br>
+			  
+		  Team Order Form<br><a href="uniformBuilder.html"><img src="assets/teamorderform.png" width="180px;"  alt=""/></a> 	  
+
+			  
 		  </div>
--->
-	 
-	    <div class="uniformBuilderLinkDiv">
-		  <a href="uniformBuilder.html" target = "_blank">Go to Alleson's Uniform Builder<img src="assets/uniformBuilderLink.png" width="500" alt=""/></a>
-		  </div>
-			
+		  
+		  
+		  
+		  
+		  
+
+		</div>
+	  
 <!--			<a><div id = "sizingSheet">Download team sizing sheet</div></a>-->
 		  
-	</div>
+	
 	  <div class="serviceContent" id="lettermanjackets">
 			<h2>LETTERMAN JACKETS</h2>
 		  		<div id="lettermanImgDiv"><img src="assets/lettermanjacket.png" width="300"  alt=""/> 
@@ -419,13 +479,39 @@ $(document).ready(() => {
 		</div>
 	  <div class="serviceContent" id="screenprinting">
 		  <h2>SCREEN PRINTING</h2>
-		<img src="assets/screenprint.jpg" width="600"  alt=""/> </div>
+		
+		  <div>
+		  <img src="assets/screenprint.jpg" width="400"  alt=""/> 
+		  <a href="contact.html" target="_blank"><img src="assets/screenorderform.png" width="150" alt=""/></a>
+			 </div><br>
+  	
+		  Design custom screen prints for team jerseys, parents shirts, family anniversaries, etc.  Pricing depends on number of shirts ordered and number of colors on screen print.  Come in to get a quote.
+		  
+		  
+</div>
 	  <div class="serviceContent" id="heatpressing">
 			<h2>HEAT PRESSING</h2>
-		 <img src="assets/heatpress.jpg" width="500" alt=""/> 
+		  
+		  <div id = "heatpressTextDiv">
+			  Come in the store to get your garmets heat pressed.<br>
+			  
+			  <ul>
+			  <li>Gym Uniforms</li>
+			  <li>Hoodies</li>  
+			  <li>Jerseys</li>  	  
+			  <li>Fan Shirts</li>	  
+			  <li>Custom Shirts</li>		  
+			  </ul>
+			  
+		  </div>
+		  
+		  <div id = "heatpressImgDiv">
+		  
+		 <img src="assets/heatpress.jpg" width="400" alt=""/> 
+		  </div>
 		</div>
 	  
-	  
+    </div>
 	  
 	  
 	  
@@ -434,7 +520,7 @@ $(document).ready(() => {
 	  
 	
 
-	</div>
+	
     
   <div class="footer">
 	
@@ -466,12 +552,11 @@ $(document).ready(() => {
 	  <div id ="bbb" ><a  href="https://www.bbb.org/us/la/shreveport/profile/sporting-goods-retail/sports-world-1015-4000183/accreditation-information"><img src="assets/bbb.png" width="100" alt=""/></a></div> </div>
 	
 	
-	</div>
 	
 	
 	
 	
-  	
+  	</div>
 	
 	
 </div>
