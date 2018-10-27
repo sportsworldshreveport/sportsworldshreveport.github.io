@@ -4,12 +4,13 @@
 	background-color: #FFFFFF;
 	height: 500px;
 	width: 100%;
+	z-index: -1;
 }
 
 body {
 	margin: 0;
 	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
-	
+	background-color: #E8E8E8;
 	
 }
 
@@ -39,9 +40,14 @@ body {
 	position: fixed;
 	top: 0;
 	background-color: white;
+	z-index: 0;
 
 }
 
+
+.logo {
+	width: 150px;
+}
 
 .homeImage {
 	background-color: #F03034;
@@ -72,7 +78,7 @@ body {
 	background-color: #D4D4D4;
 	height: 300px;
 	width: 100%;
-	
+	display: block;
 }
 	
 
@@ -122,6 +128,52 @@ body {
 		
 	}	
 	
+#menuIconDiv {
+	display: none;
+	
+}
+
+
+#closeIconDiv {
+	position: fixed;
+	top:40px;
+	right:40px;
+	cursor: pointer;
+	
+}
+
+.mobileNavDiv {
+	position: fixed;
+	height:100%;
+	width: 100%;
+	background-color: lightgray;
+	z-index: 1;
+	top: 0;
+	visibility: hidden;
+	
+	
+}
+
+#mobileNav {
+	list-style-type: none;
+	text-decoration: none;
+	color:grey;
+	margin-top: 125px;
+	
+}
+
+#mobileNav li {
+	font-size: 24px;
+	margin-top: 40px;
+}
+
+#mobileNav li a {
+	color:gray;
+	text-decoration: none;
+}
+
+
+
 .phoneAddressDiv {
 	float: left;
 	height: 100%;
@@ -130,11 +182,12 @@ body {
 .phoneDiv {
 	height: 50px;
 	width: 100%;
+	
 }
 
 .addressDiv {
 	height: 80px;
-	width: 100%;	
+	width: 100%;
 	}	
 .phoneIconDiv, .addressIconDiv {
 	float: left;
@@ -210,18 +263,23 @@ body {
 }	
 	
  .social {
-		margin: 10px;
+		margin: 15px;
+	 
 		float: right;
 	}	
 	
 #bbb {
 	margin-right: 10px;
 	
+		
 	}	
 	
+
+
 #siteMapNav li {
 	list-style-type: none;
 	text-decoration: none;
+	padding: 0;
 	}
 	
 #siteMapNav li a {
@@ -231,14 +289,114 @@ body {
 	
 #siteMapNav li a:hover {
 	color: black;
+	padding: 0;
 	}
 	
+#mobileFooter {
+	visibility:collapse;
+	display: none;
+	}
+
+#mobilePhoneAddress {
+	width: 80%;
+	text-align: left;
+	color: gray;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#mobilePhoneAddress a {
+	color:gray;
+	
+	
+}
 
 
+@media screen and (max-width:945px){
+	.nav li {
+	margin-left: 0px;
+	
+	}
+	
+	.phoneContentDiv a, .addressContentDiv a {
+	font-size: 8px;
+	
+	
+	}
+	
+	
+	.phoneAddressDiv {
+	
+}
+	
+.phoneContentDiv {
+	width: 80px;
+
+	
+	
+	}
+	
+.addressContentDiv {
+	
+	width: 80px;
+	
+		
+	}
+	
+}
 
 
+@media screen and (max-width:835px){
 
+.navDiv {
+	visibility: collapse;
+}
+.phoneAddressDiv {
+	visibility: collapse;
 
+	
+}
+	
+.footer {
+	visibility: collapse;
+	display: none;
+	}	
+	
+#mobileFooter {
+	visibility:visible;	
+	display: block;
+	width: 100%;
+	background-color: #D4D4D4;
+	text-align: center;
+	color:gray;
+	}	
+	
+	
+#menuIconDiv {
+	visibility:visible;
+	display: block;
+	position: fixed;
+	top:40px;
+	right:40px;
+	cursor: pointer;
+	z-index: 10;
+}
+	
+	
+.logo {
+	width: 100px;
+}
+	
+	
+.label {
+	height: 120px;
+	
 
+}
+	
+	
+	
+	
+}
 
 	

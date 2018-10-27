@@ -3,7 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Sports World</title>
-<link rel="icon" href="assets/LOGO.png"><style type="text/css">
+<link rel="icon" href="assets/LOGO.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	
+	<style type="text/css">
 .content {
 	height: 500px;
 	width: 100%;
@@ -13,6 +17,15 @@
 }
 	
 
+.mobileContent {
+	width: 100%;
+	background-color: #E8E8E8;
+	margin-top: 120px;	
+	display: none;
+	text-align: center;
+		}		
+		
+		
 #leftHomeDiv {
 	width: 40%;
 	height: 500px;
@@ -25,9 +38,8 @@
 		
 	}
 
-#storeHoursDiv {
+.storeHoursDiv {
 	width: 300px;
-	height: 240px;
 	background-color: white;
 	margin-left: auto;
 	margin-right: auto;
@@ -36,19 +48,17 @@
 	color:gray;
 	}
 
-#openToday {
+.openToday {
 	color: black;	
 	margin-left: 5px;
 	}	
 
-#hours {
+.hours {
 	font-size: 11px;
 	margin-left: 5px;
 	}	
-#promoDiv {
+.promoDiv {
 	width: 300px;
-	height: 150px;;
-	background-color: navy;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 30px;	
@@ -57,12 +67,120 @@
 	
 	
 	}
+		
+
+@media screen and (max-width:835px){
 	
-</style>
+	.content {
+		display: none;
+		padding-top: 20px;
+		
+	}
+	
+	.mobileContent {
+		display: block;
+	}
+	
+	
+	.storeHoursDiv{
+	margin-top: 150px;
+		width: 90%;
+	}
+	
+	.promoDiv {
+		width:90%;
+	}
+	
+	
+	
+	.hours {
+	font-size: 10px;
+	margin-left: 5px;
+	}	
+	
+	.promoDiv {
+		margin-bottom: 40px
+		
+	}
+	
+	
+		}		
+		
+	
+    </style>
 <link href="styles.css" rel="stylesheet" type="text/css">
+	
+	
+<script accesskey=""src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+</script>
+	
+<script>
+	
+$(document).ready(() => {
+	
+	$('#menuIconDiv').click(function (e) {
+		
+		
+	$('.mobileNavDiv').css('visibility','visible');		
+	$('#menuIconDiv').css('visibility','hidden');	
+	
+	$('.pageWrapper').css('visibility','hidden');	
+		
+		
+	});
+	
+	$('#closeIconDiv').click(function (e) {
+		
+		
+	$('.mobileNavDiv').css('visibility','hidden');		
+	$('#menuIconDiv').css('visibility','visible');	
+	
+	$('.pageWrapper').css('visibility','visible');	
+			
+	});
+	
+	
+});
+	
+	
+</script>	
+	
 </head>
 
 <body>
+	
+<div class = "mobileNavDiv">
+  <div id ="closeIconDiv"><img src="assets/x.png" width="40px" alt=""/> </div>
+	
+
+
+	<ul id="mobileNav">
+    <li><a href="index.html">HOME</a></li>
+			<li><a href="equipment.html">EQUIPMENT/APPAREL</a></li>
+			<li><a href="uniformBuilder.html">UNIFORM BUILDER</a></li>
+			<li><a href="contact.html">CONTACT</a></li>
+		    
+		  
+		</ul><br><br>
+	
+	
+<div id = "mobilePhoneAddress">
+	<a href = "tel:318-686-1880" ><img src="assets/socials/phone.png" width="40"  alt=""/><br>
+	318-686-1880</a><br><br><br>
+	
+	
+	<a href = "https://www.google.com/maps?q=8809+Jewella+Ave.+Shreveport,+LA+71108&hl=en" target="_blank"><img src="assets/socials/directions.png" width="40"  alt=""/><br>
+	8809 Jewella Ave.<br>
+	Shreveport, LA 71108</a>
+  
+	
+	
+	
+	</div>
+	
+	
+	</div>	
+	
 	
 <div class="pageWrapper">
   <div class="topBanner">
@@ -72,7 +190,7 @@
 	</div>
   <div class="label">
     <div class="logoDiv">
-	  <a href="index.html"><img src="assets/logo2.png" width="150"  alt=""/></a> 
+	  <a href="index.html"><img class = "logo" src="assets/logo2.png"  alt=""/></a> 
 	</div>
     <div class="navDiv">
 	  
@@ -106,7 +224,7 @@
 	  
 	  
 	  
-	  
+	    <div id ="menuIconDiv"><img src="assets/menuIcon.png" width="40px" alt=""/></div>
 		  
 	  
    
@@ -121,13 +239,13 @@
 	  
 	<div id = "leftHomeDiv">
 	  
-	  <div id = "storeHoursDiv">
+	  <div class = "storeHoursDiv">
 		
 		<img src="assets/storeFront.jpg" width="300" alt=""/> 
 		
-		<div id = "openToday">OPEN TODAY</div>
+		<div class = "openToday">OPEN TODAY</div>
 		
-		<div id = "hours">MON-FRI : 9am - 6pm <br>
+		<div class = "hours">MON-FRI : 9am - 6pm <br>
 		SAT: 9am -5pm <br>
 		SUN: CLOSED
 		  </div>
@@ -136,7 +254,7 @@
 		</div>
 		
 		
-		<div id = "promoDiv">
+		<div class = "promoDiv">
 	    <img src="assets/promo.jpg" width="300" height="150" alt=""/> </div>
 	  
     </div>  
@@ -145,7 +263,41 @@
 	
 	
 	</div>
-<div class="leftFooterDiv">
+	
+	
+	<div class="mobileContent">
+	
+		<div class = "storeHoursDiv">
+		
+		<img src="assets/storeFront.jpg" width="100%" alt=""/> 
+		
+		<div class = "openToday">OPEN TODAY</div>
+		
+		<div class = "hours">MON-FRI : 9am - 6pm <br>
+		SAT: 9am -5pm <br>
+		SUN: CLOSED
+		  </div>
+		  
+		
+		</div>
+		
+		
+		<div class = "promoDiv">
+	    <img src="assets/promo.jpg" width="100%"  alt=""/> </div>
+	
+	
+		<img src="assets/frontpage.png" width="90%"  alt=""/>
+		
+		
+	</div>
+	
+	
+   
+  <div class="footer">
+	
+	
+	
+	<div class="leftFooterDiv">
 	  
 	  
 		<ul id="siteMapNav">
@@ -169,11 +321,28 @@
 	  </div>
 	  <div class="rightFooterDiv">
 	  <div><div class = "social" ><a href="https://twitter.com/sportsworldshv"><img src="assets/socials/twitter.png" width="40"  alt=""/></a></div> 
-	  <div class = "social" ><a href="https://www.facebook.com/SPORTSWORLDSHREVEPORT/"><img src="assets/socials/facebook.png" width="40"  alt=""/></a></div></div>
-	  <div id ="bbb" ><a  href="https://www.bbb.org/us/la/shreveport/profile/sporting-goods-retail/sports-world-1015-4000183/accreditation-information"><img src="assets/bbb.png" width="100" alt=""/></a></div> </div>    
-  <div class="footer"></div>
+	  <div class = "social" ><a href="https://www.facebook.com/SPORTSWORLDSHREVEPORT/"><img src="assets/socials/facebook.png" width="40"  alt=""/></a></div></div><br>
+	  <div id ="bbb" ><a  href="https://www.bbb.org/us/la/shreveport/profile/sporting-goods-retail/sports-world-1015-4000183/accreditation-information"><img src="assets/bbb.png" width="100" alt=""/></a></div> </div> 
 	
 	
+	
+	
+	</div>
+	
+	<div id = "mobileFooter"><br>
+	
+	 SPORTS WORLD SHREVEPORT 2018
+		
+	 <div><a  href="https://www.bbb.org/us/la/shreveport/profile/sporting-goods-retail/sports-world-1015-4000183/accreditation-information"><img src="assets/bbb.png" width="30%" alt=""/></a></div>
+		
+	<br>	
+		
+	 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13472.019889365112!2d-93.7967008!3d32.4190249!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1f5d9bb54ecddd4c!2sSports+World!5e0!3m2!1sen!2sus!4v1540260830811" width="90%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>	
+	
+	<br><br>
+		
+		
+	</div>
 	
 	
   	

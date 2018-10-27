@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Sports World</title>
-	<link rel="icon" href="assets/LOGO.png">	
+<link rel="icon" href="assets/LOGO.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style type="text/css">
 
 	
@@ -15,7 +17,17 @@
 	margin-top: 150px;
 	text-align: center;
 }
+	
+.mobileContent {
+	width: 100%;
+	background-color: #E8E8E8;
+	margin-top: 120px;	
+	display: none;
+	text-align: center;
+		}		
+	
 
+	
 #equipNav {
 	color: black;
 	text-decoration: underline;
@@ -136,13 +148,29 @@ h1 {
 	
 #teamuniforms p {
 	color: gray;
-	}		
+	}
 
+#front {
+		height: 450px;
+	}	
+	
+#front p {
+	color: gray;	
+	}	
+
+#mobileHeatpress ul{
+	color:gray;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	}	
+	
+	
 .leftServiceDiv{
 	float:left;
 	width: 70%;
 	height: 300px;
-	}	
+	}
 .rightServiceDiv{
 	float:left;
 	width: 160px;
@@ -249,6 +277,59 @@ h1 {
 #heatpressTextDiv ul li {
 	margin-top: 25px;	
 	}	
+
+	
+.mobileServices {
+	background-color: white;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	text-align: left;
+	font-size: 18px;
+	}	
+	
+	
+.mobileServices p {
+		color:gray;
+	    font-size: 12px;
+	}
+	
+	
+#mobileSportsList{
+	color:gray;
+	list-style-type: none;
+	font-size: 32px;
+	margin: 0;
+	padding: 0;
+	}	
+
+#mobileSportsList li {
+	margin: 10px;
+	padding: 0;
+	}	
+	
+@media screen and (max-width:835px){
+	
+	.content {
+		display: none;
+		padding-top: 20px;
+		
+	}
+	
+	.mobileContent {
+		display: block;
+	}
+	
+	
+	#mobileIntro {
+		margin-top: 150px;
+		
+	}	
+	
+	
+		}		
+	
 	
 </style>
 <link href="styles.css" rel="stylesheet" type="text/css">
@@ -260,6 +341,28 @@ h1 {
                 
             
 $(document).ready(() => {
+	
+	$('#menuIconDiv').click(function (e) {
+		
+		
+	$('.mobileNavDiv').css('visibility','visible');		
+	$('#menuIconDiv').css('visibility','hidden');	
+		
+	$('.pageWrapper').css('visibility','hidden');	
+	
+			
+	});
+	
+	$('#closeIconDiv').click(function (e) {
+		
+		
+	$('.mobileNavDiv').css('visibility','hidden');		
+	$('#menuIconDiv').css('visibility','visible');	
+	
+	$('.pageWrapper').css('visibility','visible');	
+			
+	});
+	
 	
 	$('#teamsportsButton').click(function (e) {
 		
@@ -321,6 +424,38 @@ $(document).ready(() => {
 
 <body>
 	
+<div class = "mobileNavDiv">
+  <div id ="closeIconDiv"><img src="assets/x.png" width="40px" alt=""/> </div>
+	
+	
+	<ul id="mobileNav">
+			<li><a href="index.html">HOME</a></li>
+			<li><a href="equipment.html">EQUIPMENT/APPAREL</a></li>
+			<li><a href="uniformBuilder.html">UNIFORM BUILDER</a></li>
+			<li><a href="contact.html">CONTACT</a></li>
+		    
+		  
+		</ul><br><br>
+	
+	
+	<div id = "mobilePhoneAddress">
+	<a href = "tel:318-686-1880" ><img src="assets/socials/phone.png" width="40"  alt=""/><br>
+	318-686-1880</a><br><br><br>
+	
+	
+	<a href = "https://www.google.com/maps?q=8809+Jewella+Ave.+Shreveport,+LA+71108&hl=en" target="_blank"><img src="assets/socials/directions.png" width="40"  alt=""/><br>
+	8809 Jewella Ave.<br>
+	Shreveport, LA 71108</a>
+  
+	
+	
+	
+	</div>
+	
+	
+	</div>	
+	
+	
 <div class="pageWrapper">
 <!--
   <div class="topBanner">
@@ -332,7 +467,7 @@ $(document).ready(() => {
 -->
   <div class="label">
     <div class="logoDiv">
-	  <a href="index.html"><img src="assets/logo2.png" width="150" alt=""/></a> 
+	  <a href="index.html"><img class = "logo"  src="assets/logo2.png" width="150" alt=""/></a> 
 	</div>
     <div class="navDiv">
 	  
@@ -365,7 +500,7 @@ $(document).ready(() => {
 	  
 	  
 	  
-	  
+	  <div id ="menuIconDiv"><img src="assets/menuIcon.png" width="40px" alt=""/></div>
 	  
 		  
 	  
@@ -381,7 +516,7 @@ $(document).ready(() => {
 	  
     <div class="servicesDiv">
 	  <ul class="servicesNav">
-		<li id="teamsportsButton">Team Sports</li>
+		<li id="teamsportsButton">Equipment</li>
 		<li id="teamuniformsButton">Team Uniforms</li>
 		<li id="lettermanjacketsButton">Letterman Jackets</li>
 <!--		<li id="gymuniformsButton">Gym Uniforms</li>-->
@@ -394,7 +529,17 @@ $(document).ready(() => {
 	  </div>
     <div class="serviceContentDiv">
 		
-	<div class="serviceContent" id="front"></div>	
+	<div class="serviceContent" id="front">
+		
+		<h2>WE ARE YOUR SPORTS PROFESSIONALS</h2> <br>
+		
+		<img src="assets/gloves.jpg" width="600px" alt=""/> 
+		
+		<br>
+		<p>We have been a part of the Shreveport-Bossier sporting community for over four decades.  We specialize in team sports.  Sports World carries a full line of baseball and football equipment. Our staff has a unique talent for creating sports team uniforms that stand out on the field and is known for making the impossible, the possible. Sports World is also the place to go for your Letterman jackets and customized chenille patches. </p>
+		
+		
+		</div>	
 		
       <div class="serviceContent" id="teamsports">
         <div class="serviceContentPanel">
@@ -436,11 +581,11 @@ $(document).ready(() => {
 		  
 		  <div class = "leftServiceDiv"><br><img src="assets/uniforms.jpeg" width="400" alt=""/></div>
 		  <div class = "rightServiceDiv">
-		  Alleson Uniform Builder<br><a href="uniformBuilder.html"><img src="assets/uniformBuilder.jpg" width="180px;"  alt=""/></a> 
+		  Alleson Uniform Builder<br><a href="uniformBuilder.html" target="_blank"><img src="assets/uniformBuilder.jpg" width="180px;"  alt=""/></a> 
 			  
 			  		<br><br>
 			  
-		  Team Order Form<br><a href="uniformBuilder.html"><img src="assets/teamorderform.png" width="180px;"  alt=""/></a> 	  
+		  Team Order Form<br><a href="teamorderform.html" target="_blank"><img src="assets/teamorderform.png" width="180px;"  alt=""/></a> 	  
 
 			  
 		  </div>
@@ -482,7 +627,7 @@ $(document).ready(() => {
 		
 		  <div>
 		  <img src="assets/screenprint.jpg" width="400"  alt=""/> 
-		  <a href="contact.html" target="_blank"><img src="assets/screenorderform.png" width="150" alt=""/></a>
+		  <a href="screenorderform.html" target="_blank"><img src="assets/screenorderform.png" width="150" alt=""/></a>
 			 </div><br>
   	
 		  Design custom screen prints for team jerseys, parents shirts, family anniversaries, etc.  Pricing depends on number of shirts ordered and number of colors on screen print.  Come in to get a quote.
@@ -517,7 +662,116 @@ $(document).ready(() => {
 	  
 	</div>
 	  
-	  
+	
+	
+	
+	
+	<div class = "mobileContent">
+	
+	
+		
+		<div id = "mobileIntro" class = "mobileServices">
+	    <h2>WE ARE YOUR SPORTS PROFESSIONALS</h2>
+			
+			<img src="assets/gloves.jpg" width="100%"  alt=""/> 
+		
+			<br>
+		<p>We have been a part of the Shreveport-Bossier sporting community for over four decades.  We specialize in team sports.  Sports World carries a full line of baseball and football equipment. Our staff has a unique talent for creating sports team uniforms that stand out on the field and is known for making the impossible, the possible. Sports World is also the place to go for your Letterman jackets and customized chenille patches. </p>
+		
+		
+		</div>
+		
+	  <div id = "mobileTeamsports" class = "mobileServices">
+		<h2>EQUIPMENT</h2>
+		  
+		  <ul id="mobileSportsList">
+				<li>Baseball</li>
+				<li>Football</li>
+				<li>Basketball</li>
+				<li>Track and Field</li>
+				<li>Soccer</li>
+				<li>More</li>
+			</ul>
+		  
+		<p>Quality equipment from name brands for all team sports.  Call us for pricing and more info. </p>
+			
+			<h4>Brands we carry:</h4> 
+		  
+		<img src="assets/brands.png" width="100%"  alt=""/> </div>
+		
+		
+	
+		<div id = "mobileTeamuniforms" class = "mobileServices">
+		<h2>TEAM UNIFORMS</h2>
+		
+	    <img src="assets/uniforms.jpeg" width="100%"  alt=""/>
+		<p>We have many styles and customization options for all uniforms.  Come into the store to get a quote on your team's uniforms today! </p>
+		<br>	
+			
+		Alleson Uniform Builder(click for site)<br>
+		<img src="assets/uniformBuilder.jpg" width="100%"  alt=""/> 
+			
+		<br><br>	
+			
+		Team Order Form(click to download)<br>	
+		<a href="teamorderform.html" target="_blank"><img src="assets/teamorderform.png" width="100%"  alt=""/> </a>
+		
+		</div>
+		
+	  <div id = "mobileLetterman" class = "mobileServices">
+		<h2>LETTERMAN JACKETS</h2>
+		
+		  
+		  
+		  
+	    <img src="assets/lettermanjacket.png" width="100%"  alt=""/> 
+		
+		<p>We'll help you design and order your letterman jackets and patches in store. <br><br>
+			We'll also sew new patches to previously purchased jackets.</p>	
+		
+		
+		</div>
+		
+		<div id = "mobileScreenprint" class = "mobileServices">
+		<h2>SCREEN PRINTING</h2>
+		
+	    <img src="assets/screenprint.jpg" width="100%" alt=""/> 
+			
+		<br>
+  	
+		  <p>Design custom screen prints for team jerseys, parents shirts, family anniversaries, etc.  Pricing depends on number of shirts ordered and number of colors on screen print.  Come in to get a quote.	</p>
+		
+		<br><br>	
+			
+		Screen Order Form(click to download)<br>		
+			
+		<a href="screenorderform.html" target="_blank"><img src="assets/screenorderform.png" width="100%"  alt=""/></a> </div>
+		
+		<div id = "mobileHeatpress" class = "mobileServices">
+		<h2>HEAT PRESSING</h2>
+		
+	    <img src="assets/heatpress.jpg" width="100%"  alt=""/> 
+		
+		<br>
+		<p>Come in the store to get your garmets heat pressed.</p>
+			  
+			  <ul>
+			  <li>Gym Uniforms</li>
+			  <li>Hoodies</li>  
+			  <li>Jerseys</li>  	  
+			  <li>Fan Shirts</li>	  
+			  <li>Custom Shirts</li>		  
+			  </ul>
+		
+		
+		</div>
+		<br><br>
+		
+	
+	
+  </div>
+	
+	
 	
 
 	
@@ -557,6 +811,21 @@ $(document).ready(() => {
 	
 	
   	</div>
+	
+	<div id = "mobileFooter"><br>
+	
+	 SPORTS WORLD SHREVEPORT 2018
+		
+	 <div><a  href="https://www.bbb.org/us/la/shreveport/profile/sporting-goods-retail/sports-world-1015-4000183/accreditation-information"><img src="assets/bbb.png" width="30%" alt=""/></a></div>
+		
+	<br>	
+		
+	 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13472.019889365112!2d-93.7967008!3d32.4190249!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1f5d9bb54ecddd4c!2sSports+World!5e0!3m2!1sen!2sus!4v1540260830811" width="90%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>	
+	
+	<br><br>
+		
+		
+	</div>
 	
 	
 </div>
